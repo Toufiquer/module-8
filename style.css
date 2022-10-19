@@ -104,3 +104,17 @@
   display: block;
   transition: backdrop-filter 22s;
 }
+@media (max-width: 996px) {
+  #album {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 800px) {
+  .article {
+    margin: 4px auto;
+  }
+  #album {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
