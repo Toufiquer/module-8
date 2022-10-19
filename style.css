@@ -58,3 +58,49 @@
   margin: 4px;
   text-align: justify;
 }
+
+/* Album */
+#album {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid black;
+}
+.item {
+  border: 1px solid black;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+.item .avatar img {
+  object-fit: cover;
+  width: 100%;
+  height: 600px;
+}
+.item .details {
+  display: none;
+  backdrop-filter: blur(4px);
+  background-color: rgba(223, 239, 255, 0.5);
+  position: absolute;
+  top: 0;
+  height: 600px;
+  color: rgb(0, 0, 0);
+}
+
+.item .details h2 {
+  padding-top: 60px;
+  font-size: 30px;
+  text-decoration: underline;
+}
+.item .details p {
+  font-size: 18px;
+  text-align: justify;
+  padding: 6px;
+}
+.item:hover img {
+  transform: scale(1.3);
+  transition: all 2s;
+}
+.item:hover .details {
+  display: block;
+  transition: backdrop-filter 22s;
+}
